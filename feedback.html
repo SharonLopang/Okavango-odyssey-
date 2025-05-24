@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="aboutus.html">About us</a></li>
+          <li><a href="contactus.html">Contact us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Tours</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Book now</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="feedback-border">
+    <section class="container">
+      <article class="Home-content">
+        <h1>Customer feedback</h1>
+        <p>At Okavango odyssey, we believe in giving our guests the best experience possible. Your feedback is a powerful tool that helps us grow, improve, and provide tours that meet and exceed expectations.</p>
+
+        <p>Whether you joined us on a Mokoro canoe safari, explored the skies with a scenic helicopter flight, or stayed at one of our luxury lodges, your thoughts matter. We want to know what you enjoyed, what could be better, and how we made your trip special.</p>
+  
+        <p>We welcome all types of feedback — compliments, suggestions, ideas, or even complaints. Each comment is valuable to us and helps us continue offering safe, exciting, and unforgettable adventures.</p>
+  
+        <p>Our team is committed to learning from every experience and using your input to improve. Your voice can help shape the future of tourism in the Okavango Delta and ensure every traveler feels welcomed and amazed.</p>
+  
+        <p>Please take a few minutes to fill out the form below. We truly appreciate your time and effort.</p>
+        <h2>Your opinion helps us improve and create unforgettable experiences for all our guests.</h2>
+         <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="4" required></textarea><br><br>
+          <button type="submit">Submit Feedback</button>
+      </form>
+      <script>
+          function validateForm() {
+              let isValid = true;
+              //Get form inputs
+              let name = document.getElementById("name").value.trim();
+              let email = document.getElementById("email").value.trim();
+              let feedback = document.getElementById("feedback").value.trim();
+              //Get error elements
+              let nameError = document.getElementById("nameError");
+              let emailError = document.getElementById("emailError");
+              let feedbackError = document.getElementById("feedbackError");
+              //Reset error messages
+              nameError.textContent="";
+              emailError.textContent="";
+              feedbackError.textcontent="";
+              //Validate Name (Minimum 3 characters)
+              if (name.length <3) {
+                  nameError.textContent = "Name must be atleat 3 chaeacters long.";
+                  isValid = false;
+              }
+              //Validate Email (Basic pattern check)
+              let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailPttern.test(email)) {
+                  emailError.textContent = "Enter a valid email address.";
+                  isValid = false;
+              }
+              //Validate Feedback (Minimum 10 characters)
+              if (feedback.length < 10) {
+                  feedbackError.textContent = "Feedback must be at least 10 characters long.";
+                  isValid = false;
+              }
+  
+              return isValid;
+          }
+         </script>
+         <p>Thank you for helping us grow and serve you better!</p>
+         </article>
+    </section>
+    <footer>
+      <p>&copy; 2025 Okavango odyssey.All rigths reserved.</p>
+    </footer>
+    </div>
+  </body>
+</html>
+
+
